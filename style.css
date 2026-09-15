@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Caacupe+One&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Lato', sans-serif;
+font-size: 1.2rem;
+font-weight: 400;
+background: #f9f9f9;
+}
+
+h1,
+h2,
+h3 {
+font-family: 'Playfair Display', serif;
+}
+
+a {
+color: #333;
+text-decoration: none;
+}
+
+.container {
+width: 100%;
+max-width: 1000px;
+margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 1.5rem 0;
+}
+
+.logo {
+font-size: 2.5rem;
+color: green;
+font-weight: 600;
+}
+
+nav ul {
+display: flex;
+}
+
+nav ul li {
+list-style: none;
+}
+
+nav ul li a {
+font-weight: 700;
+padding: 0 1.5rem;
+}
+
+.active {
+color: green;
+}
+
+/* Hero Section */
+
+.hero {
+min-height: 55vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 3rem 0;
+}
+
+.hero h1 {
+font-size: 3rem;
+margin-bottom: 2rem;
+}
+
+.hero h1 span {
+color: navy;
+}
+
+.hero p {
+line-height: 1.6;
+}
+
+/* Images */
+
+img {
+width: 100%;
+display: block;
+}
+
+/* Blog Cards */
+
+.card {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 2rem;
+margin-bottom: 2rem;
+background: #ececec;
+}
+
+.card > div {
+padding: 2rem;
+}
+
+.card:nth-child(even) img {
+order: 2;
+}
+
+.card img {
+width: 100%;
+height: 450px;
+object-fit: cover;
+}
+
+.card h3 {
+font-size: 2rem;
+margin-bottom: 1rem;
+}
+
+.card p {
+line-height: 1.6;
+}
+
+.publish-date {
+font-size: 1.3rem;
+font-weight: 700;
+margin-bottom: 1rem;
+}
+
+/* Read More */
+
+.read-more {
+margin-top: 2rem;
+}
+
+.read-more summary {
+display: inline-block;
+text-transform: capitalize;
+background: green;
+color: white;
+padding: .8rem 1.8rem;
+cursor: pointer;
+transition: opacity .2s ease;
+list-style: none;
+}
+
+.read-more summary:hover {
+opacity: 0.8;
+}
+
+.read-more summary::-webkit-details-marker {
+display: none;
+}
+
+.read-more p {
+margin-top: 1rem;
+}
+
+/* Footer */
+
+.footer {
+font-size: 1rem;
+background: #202020;
+padding: 1.5rem 0;
+color: #fff;
+text-align: center;
+text-transform: capitalize;
+}
+
+/* Tablet / Laptop */
+
+@media (max-width: 1080px) {
+
+.container {
+    padding: 0 5%;
+}
+
+.card {
+    gap: 1.5rem;
+}
+
+.card img {
+    height: 400px;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+body {
+    font-size: 1.2rem;
+}
+
+
+.header {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.5rem 0;
+}
+
+
+.logo {
+    font-size: 2rem;
+}
+
+
+nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+nav ul li a {
+    font-size: 1rem;
+    padding: 0 0.7rem;
+}
+
+
+.hero {
+    min-height: auto;
+    padding: 4rem 0;
+}
+
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.hero p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+.card {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+
+.card:nth-child(even) img {
+    order: initial;
+}
+
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.card > div {
+    padding: 1.5rem;
+}
+
+
+.card h3 {
+    font-size: 1.7rem;
+}
+
+
+.publish-date {
+    font-size: 1.1rem;
+}
+
+
+.read-more {
+    margin-top: 1.5rem;
+}
+
+}
+
+/* Mobile Landscape */
+
+@media (max-width: 900px) and (orientation: landscape) {
+
+.header {
+    flex-direction: row;
+    padding: 1rem 0;
+}
+
+
+.logo {
+    font-size: 2rem;
+}
+
+
+nav ul li a {
+    font-size: 1rem;
+    padding: 0 0.7rem;
+}
+
+
+.hero {
+    min-height: 80vh;
+    padding: 2rem 0;
+}
+
+
+.hero h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+
+.hero p {
+    font-size: 1rem;
+}
+
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+
+.card img {
+    height: 300px;
+}
+
+
+.card > div {
+    padding: 1.5rem;
+}
+
+
+.card h3 {
+    font-size: 1.6rem;
+}
+
+
+.card p {
+    font-size: 1rem;
+}
+
+}
